@@ -11,10 +11,10 @@ ARG package_version
 
 # Only add build tools for alpine image. The ubuntu based images have build tools already.
 # This command fails with a warning on Ubuntu (sh) and succeeds without issue on alpine (bash).
-RUN if [[ "$build_target" == *"alpine" ]] ; then apk add build-base ; fi
+RUN if which apk ; then apk add python3-dev libffi-dev libevent-dev build-base ; fi
 
-# Install packaer and build all dependencies.
-RUN pip install $package==$package_version
+# Install package and build all dependencies.
+RUN pip install inotify $package==$package_version
 
 # Build our actual container now.
 FROM python:$publish_target
