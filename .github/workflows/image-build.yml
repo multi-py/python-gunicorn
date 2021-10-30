@@ -19,8 +19,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python_versions: ["3.6", "3.7", "3.8", "3.9", "3.10"]
-        package_versions: []
+        python_versions: ["3.6", "3.7", "3.8", "3.9", "3.10"] 
+        package_versions: ["19.7.1", "19.8.0", "19.8.1", "19.9.0", "19.10.0", "20.0.0", "20.0.2", "20.0.3", "20.0.4", "20.1.0"]
         target_base: ["full", "slim", "alpine"]
     steps:
       - name: Checkout repository
@@ -30,7 +30,7 @@ jobs:
         uses: multi-py/action-python-image-builder@v1
         with:
           package: "gunicorn[gevent,setproctitle]"
-          package_latest_version: ""
+          package_latest_version: "20.1.0"
           maintainer: "Robert Hafner <tedivm@tedivm.com>"
           python_version: ${{ matrix.python_versions }}
           package_version: ${{ matrix.package_versions }}
