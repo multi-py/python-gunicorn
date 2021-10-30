@@ -1,0 +1,40 @@
+
+name: Gunicorn Image Builder
+
+# Publish on new pushed, and build on Monday Morning (UTC) regardless.
+on:
+  push:
+    branches:
+      - 'main'
+    paths-ignore:
+      - '**/README.md'
+      - 'templates/**'
+  schedule:
+    - cron:  '4 0 * * TUE'
+
+
+jobs:
+  Gunicorn-Builder:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python_versions: ["3.6", "3.7", "3.8", "3.9", "3.10"]
+        package_versions: []
+        target_base: ["full", "slim", "alpine"]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: "Create and Push Image"
+        uses: multi-py/action-python-image-builder@v1
+        with:
+          package: "gunicorn[gevent,setproctitle]"
+          package_latest_version: ""
+          maintainer: "Robert Hafner <tedivm@tedivm.com>"
+          python_version: ${{ matrix.python_versions }}
+          package_version: ${{ matrix.package_versions }}
+          target_base: ${{ matrix.target_base }}
+          registry_password: ${{ secrets.GITHUB_TOKEN }}
+          dockerfile: "${{ github.workspace }}/dockerfile"
+          docker_build_path: "${{ github.workspace }}/"
