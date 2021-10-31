@@ -5,6 +5,11 @@
 The port that the application inside of the container will listen on. This is different from the host port that gets mapped to the container.
 
 
+### `WORKERS`
+
+The number of workers to launch. A good starting point is 4 processes per core (defaults to 4).
+
+
 ### `LOG_LEVEL`
 
 The gunicorn log level. Must be one of the following:
