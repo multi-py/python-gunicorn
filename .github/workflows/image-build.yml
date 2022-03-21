@@ -16,7 +16,6 @@ on:
 jobs:
   Gunicorn-Builder:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
     strategy:
       fail-fast: false
       matrix:
@@ -29,7 +28,7 @@ jobs:
 
       - name: "Create and Push Image"
         uses: multi-py/action-python-image-builder@v1
-        timeout-minutes: 45
+        timeout-minutes: 120
         with:
           package: "gunicorn[gevent,setproctitle]"
           package_latest_version: "20.1.0"
