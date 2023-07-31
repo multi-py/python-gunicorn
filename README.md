@@ -143,7 +143,7 @@ By default the startup script checks for the following packages and uses the fir
 If you are using pip to install dependencies your dockerfile could look like this-
 
 ```dockerfile
-FROM ghcr.io/multi-py/python-gunicorn:py3.11-20.1.0
+FROM ghcr.io/multi-py/python-gunicorn:py3.11-21.2.0
 
 COPY requirements /requirements
 RUN pip install --no-cache-dir -r /requirements
@@ -255,8 +255,8 @@ If you get use out of these containers please consider sponsoring me using Githu
 </center>
 
 ## Tags
-* Recommended Image: `ghcr.io/multi-py/python-gunicorn:py3.11-20.1.0`
-* Slim Image: `ghcr.io/multi-py/python-gunicorn:py3.11-slim-20.1.0`
+* Recommended Image: `ghcr.io/multi-py/python-gunicorn:py3.11-21.2.0`
+* Slim Image: `ghcr.io/multi-py/python-gunicorn:py3.11-slim-21.2.0`
 
 Tags are based on the package version, python version, and the upstream container the container is based on.
 
@@ -267,31 +267,31 @@ Tags are based on the package version, python version, and the upstream containe
 | latest | 3.9 | py3.9-latest | py3.9-slim-latest | py3.9-alpine-latest |
 | latest | 3.8 | py3.8-latest | py3.8-slim-latest | py3.8-alpine-latest |
 | latest | 3.7 | py3.7-latest | py3.7-slim-latest | py3.7-alpine-latest |
+| 21.2.0 | 3.11 | py3.11-21.2.0 | py3.11-slim-21.2.0 | py3.11-alpine-21.2.0 |
+| 21.2.0 | 3.10 | py3.10-21.2.0 | py3.10-slim-21.2.0 | py3.10-alpine-21.2.0 |
+| 21.2.0 | 3.9 | py3.9-21.2.0 | py3.9-slim-21.2.0 | py3.9-alpine-21.2.0 |
+| 21.2.0 | 3.8 | py3.8-21.2.0 | py3.8-slim-21.2.0 | py3.8-alpine-21.2.0 |
+| 21.2.0 | 3.7 | py3.7-21.2.0 | py3.7-slim-21.2.0 | py3.7-alpine-21.2.0 |
+| 21.1.0 | 3.11 | py3.11-21.1.0 | py3.11-slim-21.1.0 | py3.11-alpine-21.1.0 |
+| 21.1.0 | 3.10 | py3.10-21.1.0 | py3.10-slim-21.1.0 | py3.10-alpine-21.1.0 |
+| 21.1.0 | 3.9 | py3.9-21.1.0 | py3.9-slim-21.1.0 | py3.9-alpine-21.1.0 |
+| 21.1.0 | 3.8 | py3.8-21.1.0 | py3.8-slim-21.1.0 | py3.8-alpine-21.1.0 |
+| 21.1.0 | 3.7 | py3.7-21.1.0 | py3.7-slim-21.1.0 | py3.7-alpine-21.1.0 |
+| 21.0.1 | 3.11 | py3.11-21.0.1 | py3.11-slim-21.0.1 | py3.11-alpine-21.0.1 |
+| 21.0.1 | 3.10 | py3.10-21.0.1 | py3.10-slim-21.0.1 | py3.10-alpine-21.0.1 |
+| 21.0.1 | 3.9 | py3.9-21.0.1 | py3.9-slim-21.0.1 | py3.9-alpine-21.0.1 |
+| 21.0.1 | 3.8 | py3.8-21.0.1 | py3.8-slim-21.0.1 | py3.8-alpine-21.0.1 |
+| 21.0.1 | 3.7 | py3.7-21.0.1 | py3.7-slim-21.0.1 | py3.7-alpine-21.0.1 |
+| 21.0.0 | 3.11 | py3.11-21.0.0 | py3.11-slim-21.0.0 | py3.11-alpine-21.0.0 |
+| 21.0.0 | 3.10 | py3.10-21.0.0 | py3.10-slim-21.0.0 | py3.10-alpine-21.0.0 |
+| 21.0.0 | 3.9 | py3.9-21.0.0 | py3.9-slim-21.0.0 | py3.9-alpine-21.0.0 |
+| 21.0.0 | 3.8 | py3.8-21.0.0 | py3.8-slim-21.0.0 | py3.8-alpine-21.0.0 |
+| 21.0.0 | 3.7 | py3.7-21.0.0 | py3.7-slim-21.0.0 | py3.7-alpine-21.0.0 |
 | 20.1.0 | 3.11 | py3.11-20.1.0 | py3.11-slim-20.1.0 | py3.11-alpine-20.1.0 |
 | 20.1.0 | 3.10 | py3.10-20.1.0 | py3.10-slim-20.1.0 | py3.10-alpine-20.1.0 |
 | 20.1.0 | 3.9 | py3.9-20.1.0 | py3.9-slim-20.1.0 | py3.9-alpine-20.1.0 |
 | 20.1.0 | 3.8 | py3.8-20.1.0 | py3.8-slim-20.1.0 | py3.8-alpine-20.1.0 |
 | 20.1.0 | 3.7 | py3.7-20.1.0 | py3.7-slim-20.1.0 | py3.7-alpine-20.1.0 |
-| 20.0.4 | 3.11 | py3.11-20.0.4 | py3.11-slim-20.0.4 | py3.11-alpine-20.0.4 |
-| 20.0.4 | 3.10 | py3.10-20.0.4 | py3.10-slim-20.0.4 | py3.10-alpine-20.0.4 |
-| 20.0.4 | 3.9 | py3.9-20.0.4 | py3.9-slim-20.0.4 | py3.9-alpine-20.0.4 |
-| 20.0.4 | 3.8 | py3.8-20.0.4 | py3.8-slim-20.0.4 | py3.8-alpine-20.0.4 |
-| 20.0.4 | 3.7 | py3.7-20.0.4 | py3.7-slim-20.0.4 | py3.7-alpine-20.0.4 |
-| 20.0.3 | 3.11 | py3.11-20.0.3 | py3.11-slim-20.0.3 | py3.11-alpine-20.0.3 |
-| 20.0.3 | 3.10 | py3.10-20.0.3 | py3.10-slim-20.0.3 | py3.10-alpine-20.0.3 |
-| 20.0.3 | 3.9 | py3.9-20.0.3 | py3.9-slim-20.0.3 | py3.9-alpine-20.0.3 |
-| 20.0.3 | 3.8 | py3.8-20.0.3 | py3.8-slim-20.0.3 | py3.8-alpine-20.0.3 |
-| 20.0.3 | 3.7 | py3.7-20.0.3 | py3.7-slim-20.0.3 | py3.7-alpine-20.0.3 |
-| 20.0.2 | 3.11 | py3.11-20.0.2 | py3.11-slim-20.0.2 | py3.11-alpine-20.0.2 |
-| 20.0.2 | 3.10 | py3.10-20.0.2 | py3.10-slim-20.0.2 | py3.10-alpine-20.0.2 |
-| 20.0.2 | 3.9 | py3.9-20.0.2 | py3.9-slim-20.0.2 | py3.9-alpine-20.0.2 |
-| 20.0.2 | 3.8 | py3.8-20.0.2 | py3.8-slim-20.0.2 | py3.8-alpine-20.0.2 |
-| 20.0.2 | 3.7 | py3.7-20.0.2 | py3.7-slim-20.0.2 | py3.7-alpine-20.0.2 |
-| 20.0.0 | 3.11 | py3.11-20.0.0 | py3.11-slim-20.0.0 | py3.11-alpine-20.0.0 |
-| 20.0.0 | 3.10 | py3.10-20.0.0 | py3.10-slim-20.0.0 | py3.10-alpine-20.0.0 |
-| 20.0.0 | 3.9 | py3.9-20.0.0 | py3.9-slim-20.0.0 | py3.9-alpine-20.0.0 |
-| 20.0.0 | 3.8 | py3.8-20.0.0 | py3.8-slim-20.0.0 | py3.8-alpine-20.0.0 |
-| 20.0.0 | 3.7 | py3.7-20.0.0 | py3.7-slim-20.0.0 | py3.7-alpine-20.0.0 |
 
 
 ### Older Tags
