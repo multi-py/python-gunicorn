@@ -76,13 +76,13 @@ The Full Images use the base Python Docker images as their parent. These images 
 To pull the latest full version:
 
 ```bash
-docker pull ghcr.io/multi-py/python-gunicorn:py3.11-LATEST
+docker pull ghcr.io/multi-py/python-gunicorn:py3.12-LATEST
 ```
 
 To include it in the dockerfile instead:
 
 ```dockerfile
-FROM ghcr.io/multi-py/python-gunicorn:py3.11-LATEST
+FROM ghcr.io/multi-py/python-gunicorn:py3.12-LATEST
 ```
 
 ### Using the Slim Image
@@ -92,13 +92,13 @@ The Slim Images use the base Python Slim Docker images as their parent. These im
 To pull the latest slim version:
 
 ```bash
-docker pull ghcr.io/multi-py/python-gunicorn:py3.11-slim-LATEST
+docker pull ghcr.io/multi-py/python-gunicorn:py3.12-slim-LATEST
 ```
 
 To include it in the dockerfile instead:
 
 ```dockerfile
-FROM ghcr.io/multi-py/python-gunicorn:py3.11-slim-LATEST
+FROM ghcr.io/multi-py/python-gunicorn:py3.12-slim-LATEST
 ```
 
 
@@ -113,13 +113,13 @@ In theory these images are smaller than even the slim images, but this amounts t
 To pull the latest alpine version:
 
 ```bash
-docker pull ghcr.io/multi-py/python-gunicorn:py3.11-alpine-LATEST
+docker pull ghcr.io/multi-py/python-gunicorn:py3.12-alpine-LATEST
 ```
 
 To include it in the dockerfile instead:
 
 ```dockerfile
-FROM ghcr.io/multi-py/python-gunicorn:py3.11-alpine-LATEST
+FROM ghcr.io/multi-py/python-gunicorn:py3.12-alpine-LATEST
 ```
 
 
@@ -129,9 +129,9 @@ FROM ghcr.io/multi-py/python-gunicorn:py3.11-alpine-LATEST
 It's also possible to copy just the Python packages themselves. This is particularly useful when you want to use the precompiled libraries from multiple containers.
 
 ```dockerfile
-FROM python:3.11
+FROM python:3.12
 
-COPY --from=ghcr.io/multi-py/python-gunicorn:py3.11-slim-LATEST /usr/local/lib/python3.11/site-packages/* /usr/local/lib/python3.11/site-packages/
+COPY --from=ghcr.io/multi-py/python-gunicorn:py3.12-slim-LATEST /usr/local/lib/python3.12/site-packages/* /usr/local/lib/python3.12/site-packages/
 ```
 
 ### Add Your App
@@ -144,7 +144,7 @@ By default the startup script checks for the following packages and uses the fir
 If you are using pip to install dependencies your dockerfile could look like this-
 
 ```dockerfile
-FROM ghcr.io/multi-py/python-gunicorn:py3.11-21.2.0
+FROM ghcr.io/multi-py/python-gunicorn:py3.12-21.2.0
 
 COPY requirements /requirements
 RUN pip install --no-cache-dir -r /requirements
@@ -212,11 +212,11 @@ This variable can be used to pass extra flags to the `gunicorn` command on launc
 
 This project actively supports these Python versions:
 
+* 3.12
 * 3.11
 * 3.10
 * 3.9
 * 3.8
-* 3.7
 
 
 ## Image Variants
@@ -261,43 +261,43 @@ If you get use out of these containers please consider sponsoring me using Githu
 </center>
 
 ## Tags
-* Recommended Image: `ghcr.io/multi-py/python-gunicorn:py3.11-21.2.0`
-* Slim Image: `ghcr.io/multi-py/python-gunicorn:py3.11-slim-21.2.0`
+* Recommended Image: `ghcr.io/multi-py/python-gunicorn:py3.12-21.2.0`
+* Slim Image: `ghcr.io/multi-py/python-gunicorn:py3.12-slim-21.2.0`
 
 Tags are based on the package version, python version, and the upstream container the container is based on.
 
 | gunicorn Version | Python Version | Full Container | Slim Container | Alpine Container |
 |-----------------------|----------------|----------------|----------------|------------------|
+| latest | 3.12 | py3.12-latest | py3.12-slim-latest | py3.12-alpine-latest |
 | latest | 3.11 | py3.11-latest | py3.11-slim-latest | py3.11-alpine-latest |
 | latest | 3.10 | py3.10-latest | py3.10-slim-latest | py3.10-alpine-latest |
 | latest | 3.9 | py3.9-latest | py3.9-slim-latest | py3.9-alpine-latest |
 | latest | 3.8 | py3.8-latest | py3.8-slim-latest | py3.8-alpine-latest |
-| latest | 3.7 | py3.7-latest | py3.7-slim-latest | py3.7-alpine-latest |
+| 21.2.0 | 3.12 | py3.12-21.2.0 | py3.12-slim-21.2.0 | py3.12-alpine-21.2.0 |
 | 21.2.0 | 3.11 | py3.11-21.2.0 | py3.11-slim-21.2.0 | py3.11-alpine-21.2.0 |
 | 21.2.0 | 3.10 | py3.10-21.2.0 | py3.10-slim-21.2.0 | py3.10-alpine-21.2.0 |
 | 21.2.0 | 3.9 | py3.9-21.2.0 | py3.9-slim-21.2.0 | py3.9-alpine-21.2.0 |
 | 21.2.0 | 3.8 | py3.8-21.2.0 | py3.8-slim-21.2.0 | py3.8-alpine-21.2.0 |
-| 21.2.0 | 3.7 | py3.7-21.2.0 | py3.7-slim-21.2.0 | py3.7-alpine-21.2.0 |
+| 21.1.0 | 3.12 | py3.12-21.1.0 | py3.12-slim-21.1.0 | py3.12-alpine-21.1.0 |
 | 21.1.0 | 3.11 | py3.11-21.1.0 | py3.11-slim-21.1.0 | py3.11-alpine-21.1.0 |
 | 21.1.0 | 3.10 | py3.10-21.1.0 | py3.10-slim-21.1.0 | py3.10-alpine-21.1.0 |
 | 21.1.0 | 3.9 | py3.9-21.1.0 | py3.9-slim-21.1.0 | py3.9-alpine-21.1.0 |
 | 21.1.0 | 3.8 | py3.8-21.1.0 | py3.8-slim-21.1.0 | py3.8-alpine-21.1.0 |
-| 21.1.0 | 3.7 | py3.7-21.1.0 | py3.7-slim-21.1.0 | py3.7-alpine-21.1.0 |
+| 21.0.1 | 3.12 | py3.12-21.0.1 | py3.12-slim-21.0.1 | py3.12-alpine-21.0.1 |
 | 21.0.1 | 3.11 | py3.11-21.0.1 | py3.11-slim-21.0.1 | py3.11-alpine-21.0.1 |
 | 21.0.1 | 3.10 | py3.10-21.0.1 | py3.10-slim-21.0.1 | py3.10-alpine-21.0.1 |
 | 21.0.1 | 3.9 | py3.9-21.0.1 | py3.9-slim-21.0.1 | py3.9-alpine-21.0.1 |
 | 21.0.1 | 3.8 | py3.8-21.0.1 | py3.8-slim-21.0.1 | py3.8-alpine-21.0.1 |
-| 21.0.1 | 3.7 | py3.7-21.0.1 | py3.7-slim-21.0.1 | py3.7-alpine-21.0.1 |
+| 21.0.0 | 3.12 | py3.12-21.0.0 | py3.12-slim-21.0.0 | py3.12-alpine-21.0.0 |
 | 21.0.0 | 3.11 | py3.11-21.0.0 | py3.11-slim-21.0.0 | py3.11-alpine-21.0.0 |
 | 21.0.0 | 3.10 | py3.10-21.0.0 | py3.10-slim-21.0.0 | py3.10-alpine-21.0.0 |
 | 21.0.0 | 3.9 | py3.9-21.0.0 | py3.9-slim-21.0.0 | py3.9-alpine-21.0.0 |
 | 21.0.0 | 3.8 | py3.8-21.0.0 | py3.8-slim-21.0.0 | py3.8-alpine-21.0.0 |
-| 21.0.0 | 3.7 | py3.7-21.0.0 | py3.7-slim-21.0.0 | py3.7-alpine-21.0.0 |
+| 20.1.0 | 3.12 | py3.12-20.1.0 | py3.12-slim-20.1.0 | py3.12-alpine-20.1.0 |
 | 20.1.0 | 3.11 | py3.11-20.1.0 | py3.11-slim-20.1.0 | py3.11-alpine-20.1.0 |
 | 20.1.0 | 3.10 | py3.10-20.1.0 | py3.10-slim-20.1.0 | py3.10-alpine-20.1.0 |
 | 20.1.0 | 3.9 | py3.9-20.1.0 | py3.9-slim-20.1.0 | py3.9-alpine-20.1.0 |
 | 20.1.0 | 3.8 | py3.8-20.1.0 | py3.8-slim-20.1.0 | py3.8-alpine-20.1.0 |
-| 20.1.0 | 3.7 | py3.7-20.1.0 | py3.7-slim-20.1.0 | py3.7-alpine-20.1.0 |
 
 
 ### Older Tags
