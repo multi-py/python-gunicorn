@@ -144,7 +144,7 @@ By default the startup script checks for the following packages and uses the fir
 If you are using pip to install dependencies your dockerfile could look like this-
 
 ```dockerfile
-FROM ghcr.io/multi-py/python-gunicorn:py3.12-
+FROM ghcr.io/multi-py/python-gunicorn:py3.12-23.0.0
 
 COPY requirements /requirements
 RUN pip install --no-cache-dir -r /requirements
@@ -261,8 +261,8 @@ If you get use out of these containers please consider sponsoring me using Githu
 </center>
 
 ## Tags
-* Recommended Image: `ghcr.io/multi-py/python-gunicorn:py3.12-`
-* Slim Image: `ghcr.io/multi-py/python-gunicorn:py3.12-slim-`
+* Recommended Image: `ghcr.io/multi-py/python-gunicorn:py3.12-23.0.0`
+* Slim Image: `ghcr.io/multi-py/python-gunicorn:py3.12-slim-23.0.0`
 
 Tags are based on the package version, python version, and the upstream container the container is based on.
 
@@ -273,6 +273,31 @@ Tags are based on the package version, python version, and the upstream containe
 | latest | 3.10 | py3.10-latest | py3.10-slim-latest | py3.10-alpine-latest |
 | latest | 3.9 | py3.9-latest | py3.9-slim-latest | py3.9-alpine-latest |
 | latest | 3.8 | py3.8-latest | py3.8-slim-latest | py3.8-alpine-latest |
+| 23.0.0 | 3.12 | py3.12-23.0.0 | py3.12-slim-23.0.0 | py3.12-alpine-23.0.0 |
+| 23.0.0 | 3.11 | py3.11-23.0.0 | py3.11-slim-23.0.0 | py3.11-alpine-23.0.0 |
+| 23.0.0 | 3.10 | py3.10-23.0.0 | py3.10-slim-23.0.0 | py3.10-alpine-23.0.0 |
+| 23.0.0 | 3.9 | py3.9-23.0.0 | py3.9-slim-23.0.0 | py3.9-alpine-23.0.0 |
+| 23.0.0 | 3.8 | py3.8-23.0.0 | py3.8-slim-23.0.0 | py3.8-alpine-23.0.0 |
+| 22.0.0 | 3.12 | py3.12-22.0.0 | py3.12-slim-22.0.0 | py3.12-alpine-22.0.0 |
+| 22.0.0 | 3.11 | py3.11-22.0.0 | py3.11-slim-22.0.0 | py3.11-alpine-22.0.0 |
+| 22.0.0 | 3.10 | py3.10-22.0.0 | py3.10-slim-22.0.0 | py3.10-alpine-22.0.0 |
+| 22.0.0 | 3.9 | py3.9-22.0.0 | py3.9-slim-22.0.0 | py3.9-alpine-22.0.0 |
+| 22.0.0 | 3.8 | py3.8-22.0.0 | py3.8-slim-22.0.0 | py3.8-alpine-22.0.0 |
+| 21.2.0 | 3.12 | py3.12-21.2.0 | py3.12-slim-21.2.0 | py3.12-alpine-21.2.0 |
+| 21.2.0 | 3.11 | py3.11-21.2.0 | py3.11-slim-21.2.0 | py3.11-alpine-21.2.0 |
+| 21.2.0 | 3.10 | py3.10-21.2.0 | py3.10-slim-21.2.0 | py3.10-alpine-21.2.0 |
+| 21.2.0 | 3.9 | py3.9-21.2.0 | py3.9-slim-21.2.0 | py3.9-alpine-21.2.0 |
+| 21.2.0 | 3.8 | py3.8-21.2.0 | py3.8-slim-21.2.0 | py3.8-alpine-21.2.0 |
+| 21.1.0 | 3.12 | py3.12-21.1.0 | py3.12-slim-21.1.0 | py3.12-alpine-21.1.0 |
+| 21.1.0 | 3.11 | py3.11-21.1.0 | py3.11-slim-21.1.0 | py3.11-alpine-21.1.0 |
+| 21.1.0 | 3.10 | py3.10-21.1.0 | py3.10-slim-21.1.0 | py3.10-alpine-21.1.0 |
+| 21.1.0 | 3.9 | py3.9-21.1.0 | py3.9-slim-21.1.0 | py3.9-alpine-21.1.0 |
+| 21.1.0 | 3.8 | py3.8-21.1.0 | py3.8-slim-21.1.0 | py3.8-alpine-21.1.0 |
+| 21.0.1 | 3.12 | py3.12-21.0.1 | py3.12-slim-21.0.1 | py3.12-alpine-21.0.1 |
+| 21.0.1 | 3.11 | py3.11-21.0.1 | py3.11-slim-21.0.1 | py3.11-alpine-21.0.1 |
+| 21.0.1 | 3.10 | py3.10-21.0.1 | py3.10-slim-21.0.1 | py3.10-alpine-21.0.1 |
+| 21.0.1 | 3.9 | py3.9-21.0.1 | py3.9-slim-21.0.1 | py3.9-alpine-21.0.1 |
+| 21.0.1 | 3.8 | py3.8-21.0.1 | py3.8-slim-21.0.1 | py3.8-alpine-21.0.1 |
 
 
 ### Older Tags
