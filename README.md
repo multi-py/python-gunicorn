@@ -144,7 +144,7 @@ By default the startup script checks for the following packages and uses the fir
 If you are using pip to install dependencies your dockerfile could look like this-
 
 ```dockerfile
-FROM ghcr.io/multi-py/python-gunicorn:py3.12-25.1.0
+FROM ghcr.io/multi-py/python-gunicorn:py3.12-25.2.0
 
 COPY requirements /requirements
 RUN pip install --no-cache-dir -r /requirements
@@ -261,8 +261,8 @@ If you get use out of these containers please consider sponsoring me using Githu
 </center>
 
 ## Tags
-* Recommended Image: `ghcr.io/multi-py/python-gunicorn:py3.12-25.1.0`
-* Slim Image: `ghcr.io/multi-py/python-gunicorn:py3.12-slim-25.1.0`
+* Recommended Image: `ghcr.io/multi-py/python-gunicorn:py3.12-25.2.0`
+* Slim Image: `ghcr.io/multi-py/python-gunicorn:py3.12-slim-25.2.0`
 
 Tags are based on the package version, python version, and the upstream container the container is based on.
 
@@ -273,6 +273,11 @@ Tags are based on the package version, python version, and the upstream containe
 | latest | 3.10 | py3.10-latest | py3.10-slim-latest | py3.10-alpine-latest |
 | latest | 3.9 | py3.9-latest | py3.9-slim-latest | py3.9-alpine-latest |
 | latest | 3.8 | py3.8-latest | py3.8-slim-latest | py3.8-alpine-latest |
+| 25.2.0 | 3.12 | py3.12-25.2.0 | py3.12-slim-25.2.0 | py3.12-alpine-25.2.0 |
+| 25.2.0 | 3.11 | py3.11-25.2.0 | py3.11-slim-25.2.0 | py3.11-alpine-25.2.0 |
+| 25.2.0 | 3.10 | py3.10-25.2.0 | py3.10-slim-25.2.0 | py3.10-alpine-25.2.0 |
+| 25.2.0 | 3.9 | py3.9-25.2.0 | py3.9-slim-25.2.0 | py3.9-alpine-25.2.0 |
+| 25.2.0 | 3.8 | py3.8-25.2.0 | py3.8-slim-25.2.0 | py3.8-alpine-25.2.0 |
 | 25.1.0 | 3.12 | py3.12-25.1.0 | py3.12-slim-25.1.0 | py3.12-alpine-25.1.0 |
 | 25.1.0 | 3.11 | py3.11-25.1.0 | py3.11-slim-25.1.0 | py3.11-alpine-25.1.0 |
 | 25.1.0 | 3.10 | py3.10-25.1.0 | py3.10-slim-25.1.0 | py3.10-alpine-25.1.0 |
@@ -293,11 +298,6 @@ Tags are based on the package version, python version, and the upstream containe
 | 25.0.1 | 3.10 | py3.10-25.0.1 | py3.10-slim-25.0.1 | py3.10-alpine-25.0.1 |
 | 25.0.1 | 3.9 | py3.9-25.0.1 | py3.9-slim-25.0.1 | py3.9-alpine-25.0.1 |
 | 25.0.1 | 3.8 | py3.8-25.0.1 | py3.8-slim-25.0.1 | py3.8-alpine-25.0.1 |
-| 25.0.0 | 3.12 | py3.12-25.0.0 | py3.12-slim-25.0.0 | py3.12-alpine-25.0.0 |
-| 25.0.0 | 3.11 | py3.11-25.0.0 | py3.11-slim-25.0.0 | py3.11-alpine-25.0.0 |
-| 25.0.0 | 3.10 | py3.10-25.0.0 | py3.10-slim-25.0.0 | py3.10-alpine-25.0.0 |
-| 25.0.0 | 3.9 | py3.9-25.0.0 | py3.9-slim-25.0.0 | py3.9-alpine-25.0.0 |
-| 25.0.0 | 3.8 | py3.8-25.0.0 | py3.8-slim-25.0.0 | py3.8-alpine-25.0.0 |
 
 
 ### Older Tags
